@@ -12,11 +12,11 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-# @app.route('/') # decorator to map the root URL ('/') to a simple request handler
-# def hello():
-#     return 'Hello World!'
+@app.route('/') # decorator to map the root URL ('/') to a simple request handler
+def hello():
+    return 'Hello World 2!'
 
-@app.route('/')
+@app.route('/form')
 def form():
 	return render_template('form.html')
 
