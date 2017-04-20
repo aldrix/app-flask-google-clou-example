@@ -1,7 +1,13 @@
-''' DESCRIPTION: This file will tell the application how to find libraries in the lib directory
+''' DESCRIPTION: This file will tell the application how to find libraries in the
+                 lib directory
+
+	             appengine_config.py is automatically loaded when Google App Engine
+	             starts a new instance of your application. This runs before any
+	             WSGI applications specified in app.yaml are loaded.
 '''
 
-from google.appengine.ext import vendro
+from google.appengine.ext import vendor
 
-# Add any libraries installed in the "lib" folder.
+# Third-party libraries are stored in "lib", vendoring will make
+# sure that they are importable by the application.
 vendor.add('lib')
