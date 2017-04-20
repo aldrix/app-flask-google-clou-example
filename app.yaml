@@ -1,0 +1,16 @@
+# DESCRIPCION: Configure the settings of your App Engine application
+
+runtime: python27
+api_version: 1
+threadsafe: true
+
+# The handlers section defines two handlers for URLs. When App Engine 
+# receives a request for a URL beginning with /static, it maps the
+# remainder of the path to files in the static directory, and if an 
+# appropriate file is found, the contents of the file are returned to 
+# the client.
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: main.app
