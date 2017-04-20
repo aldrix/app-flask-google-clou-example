@@ -16,7 +16,7 @@ app = Flask(__name__)
 # def hello():
 #     return 'Hello World!'
 
-@app.route('/form')
+@app.route('/')
 def form():
 	return render_template('form.html')
 
